@@ -439,24 +439,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "quickfox"
-version = "0.4.0"
-dependencies = [
- "anyhow",
- "clap",
- "crossterm",
- "directories",
- "fs2",
- "hound",
- "lewton",
- "libloading",
- "ratatui",
- "serde",
- "serde_json",
- "tempfile",
-]
-
-[[package]]
 name = "lewton"
 version = "0.10.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -687,6 +669,24 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "985e7ec9bb745e6ce6535b544d84d6cd6f7ad8bd711c398938ae983b91a766d9"
 dependencies = [
  "unicode-ident",
+]
+
+[[package]]
+name = "quickfox"
+version = "0.4.0"
+dependencies = [
+ "anyhow",
+ "clap",
+ "crossterm",
+ "directories",
+ "fs2",
+ "hound",
+ "lewton",
+ "libloading",
+ "ratatui",
+ "serde",
+ "serde_json",
+ "tempfile",
 ]
 
 [[package]]
