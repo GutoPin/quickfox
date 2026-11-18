@@ -15,7 +15,7 @@
 
 ## Before the first public release
 
-- [ ] Choose a license.
+- [x] Choose a license (MIT).
 - [ ] Run the macOS and Windows CI jobs and try both by hand.
 - [ ] Manual checks in GNOME Terminal, Kitty, WezTerm and over SSH.
 - [ ] Watch five beginners use it and fix what trips them up.

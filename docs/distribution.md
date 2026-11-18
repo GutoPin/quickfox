@@ -13,7 +13,7 @@ python3 scripts/smoke_pty.py target/release/quickfox
 ```
 
 This writes `target/packages/quickfox-<version>-linux-x86_64.tar.gz` and `SHA256SUMS`.
-The archive holds the executable, README, changelog, docs and screenshots, the config
+The archive holds the executable, README, license, changelog, docs and screenshots, the config
 example and schema, the word-list provenance and the optional sound installer. The
 personal-use keyboard recordings are never included.
 

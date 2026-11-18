@@ -5,10 +5,12 @@
 **Touch typing practice for the terminal.**<br>
 Short sessions, five levels, mistakes you can see. Runs offline.
 
+[![CI](https://img.shields.io/github/actions/workflow/status/GutoPin/quickfox/ci.yml?branch=main&style=flat-square&label=ci)](https://github.com/GutoPin/quickfox/actions/workflows/ci.yml)
 ![Rust 1.88+](https://img.shields.io/badge/rust-1.88%2B-0a0a0a?style=flat-square&logo=rust&logoColor=white)
 ![Linux](https://img.shields.io/badge/platform-linux-0a0a0a?style=flat-square&logo=linux&logoColor=white)
 ![Offline](https://img.shields.io/badge/network-none-0a0a0a?style=flat-square)
 ![Themes](https://img.shields.io/badge/themes-14-ff854d?style=flat-square)
+[![License: MIT](https://img.shields.io/badge/license-MIT-0a0a0a?style=flat-square)](LICENSE)
 
 [Install](#install) · [Play](#play) · [Keys](#keys) · [Themes](#themes) · [Config](#configuration) · [Scoring](#how-scoring-works)
 
@@ -29,16 +31,22 @@ Short sessions, five levels, mistakes you can see. Runs offline.
 
 ## Install
 
-You need **Rust 1.88 or newer**.
+One command, with **Rust 1.88 or newer** ([rustup.rs](https://rustup.rs)):
 
 ```bash
-git clone <repository-url> quickfox
-cd quickfox
-cargo install --path . --locked
+cargo install --git https://github.com/GutoPin/quickfox --locked
 quickfox
 ```
 
-`cargo install` puts the binary in `~/.cargo/bin`. To try it without installing, run `cargo run --release --locked`.
+Or from a clone:
+
+```bash
+git clone https://github.com/GutoPin/quickfox.git
+cd quickfox
+cargo run --release --locked
+```
+
+`cargo install` puts the binary in `~/.cargo/bin`. Uninstall with `cargo uninstall quickfox`.
 
 Linux x86_64 is tested. macOS and Windows are in the CI matrix but have not been tried by hand, and key sounds are Linux-only for now. Use a terminal of at least **60 × 20** cells.
 
@@ -236,4 +244,4 @@ More detail: [architecture](docs/architecture.md), [game rules](docs/game-design
 
 ## License
 
-No license has been chosen yet, so all rights are reserved for now. The bundled word lists are documented in [assets/words/LICENSES.md](assets/words/LICENSES.md).
+[MIT](LICENSE). The bundled word lists are original; see [assets/words/LICENSES.md](assets/words/LICENSES.md).
