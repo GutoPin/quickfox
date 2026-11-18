@@ -1,0 +1,21 @@
+name: Build Linux release artifact
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+permissions:
+  contents: read
+jobs:
+  linux:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@1.88.0
+      - run: cargo test --locked
+      - run: bash scripts/package-linux.sh
+      - run: python3 scripts/smoke_pty.py target/release/quickfox
+      - uses: actions/upload-artifact@v4
+        with:
+          name: quickfox-linux-x86_64
+          path: target/packages/*
+          if-no-files-found: error
