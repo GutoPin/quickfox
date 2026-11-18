@@ -1,0 +1,272 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Quickfox configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1,
+      "default": 1
+    },
+    "theme": {
+      "enum": [
+        "nightfall",
+        "orchid",
+        "paperwave",
+        "ember",
+        "nord",
+        "dracula",
+        "catppuccin",
+        "tokyo-night",
+        "gruvbox",
+        "rose-pine",
+        "solarized-light",
+        "forest",
+        "custom",
+        "mono"
+      ],
+      "default": "nightfall"
+    },
+    "color_mode": {
+      "enum": [
+        "auto",
+        "true-color",
+        "ansi256",
+        "ansi16",
+        "mono"
+      ],
+      "default": "auto"
+    },
+    "reduced_motion": {
+      "type": "boolean",
+      "default": false
+    },
+    "high_contrast": {
+      "type": "boolean",
+      "default": false
+    },
+    "ascii": {
+      "type": "boolean",
+      "default": false
+    },
+    "underline_caret": {
+      "type": "boolean",
+      "default": false
+    },
+    "onboarded": {
+      "type": "boolean",
+      "default": false
+    },
+    "keybindings": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "menu": {
+          "type": "string",
+          "pattern": "^(f([1-9]|1[0-2])|ctrl+[abdefgklnoprtuvwxy])$"
+        },
+        "commands": {
+          "type": "string",
+          "pattern": "^(f([1-9]|1[0-2])|ctrl+[abdefgklnoprtuvwxy])$"
+        },
+        "restart": {
+          "type": "string",
+          "pattern": "^(f([1-9]|1[0-2])|ctrl+[abdefgklnoprtuvwxy])$"
+        },
+        "reload_config": {
+          "type": "string",
+          "pattern": "^(f([1-9]|1[0-2])|ctrl+[abdefgklnoprtuvwxy])$"
+        }
+      }
+    },
+    "layout": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sidebar": {
+          "type": "boolean",
+          "default": false
+        },
+        "prompt_width": {
+          "type": "integer",
+          "minimum": 32,
+          "maximum": 100,
+          "default": 76
+        },
+        "line_spacing": {
+          "enum": [
+            0,
+            1,
+            2
+          ],
+          "default": 1
+        }
+      }
+    },
+    "practice": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "mode": {
+          "enum": [
+            "time",
+            "words"
+          ],
+          "default": "time"
+        },
+        "amount": {
+          "type": "integer",
+          "enum": [
+            25,
+            30,
+            50,
+            60,
+            100,
+            120
+          ],
+          "default": 60
+        },
+        "level": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5,
+          "default": 2
+        },
+        "adaptive": {
+          "type": "boolean",
+          "default": true
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "const": "words"
+              }
+            },
+            "required": [
+              "mode"
+            ]
+          },
+          "then": {
+            "properties": {
+              "amount": {
+                "enum": [
+                  25,
+                  50,
+                  100
+                ]
+              }
+            },
+            "required": [
+              "amount"
+            ]
+          },
+          "else": {
+            "properties": {
+              "amount": {
+                "enum": [
+                  30,
+                  60,
+                  120
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "custom_theme": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "bg": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "panel": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "fg": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "muted": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "accent": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "secondary": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "tertiary": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "success": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "error": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "gold": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "selection": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "border": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        }
+      }
+    },
+    "sound": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": false
+        },
+        "profile": {
+          "enum": [
+            "creamy",
+            "soft",
+            "typewriter",
+            "eg-oreo",
+            "nk-cream"
+          ],
+          "default": "creamy"
+        },
+        "volume": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 200,
+          "default": 35
+        },
+        "directory": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": null,
+          "description": "Optional directory containing personal-use oreo.ogg and nk-cream.wav recordings."
+        }
+      }
+    }
+  }
+}

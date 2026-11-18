@@ -1,0 +1,47 @@
+{
+  "$schema": "./quickfox.schema.json",
+  "schema_version": 1,
+  "theme": "custom",
+  "color_mode": "auto",
+  "reduced_motion": false,
+  "high_contrast": false,
+  "ascii": false,
+  "underline_caret": false,
+  "keybindings": {
+    "menu": "ctrl+g",
+    "commands": "ctrl+p",
+    "restart": "ctrl+r",
+    "reload_config": "f5"
+  },
+  "layout": {
+    "sidebar": false,
+    "prompt_width": 76,
+    "line_spacing": 1
+  },
+  "practice": {
+    "mode": "time",
+    "amount": 60,
+    "level": 2,
+    "adaptive": true
+  },
+  "custom_theme": {
+    "bg": "#0a0a0a",
+    "panel": "#181818",
+    "fg": "#eeeeee",
+    "muted": "#a3a3a3",
+    "accent": "#eeeeee",
+    "secondary": "#a3a3a3",
+    "tertiary": "#a3a3a3",
+    "success": "#eeeeee",
+    "error": "#eeeeee",
+    "gold": "#eeeeee",
+    "selection": "#292929",
+    "border": "#555555"
+  },
+  "sound": {
+    "enabled": false,
+    "profile": "creamy",
+    "volume": 35,
+    "directory": null
+  }
+}
