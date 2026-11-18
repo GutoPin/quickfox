@@ -1,0 +1,30 @@
+                                                                                                    
+    QUICKFOX     Settings                                                                    0 XP   
+  ────────────────────────────────────────────────────────────────────────────────────────────────  
+                                                                                                    
+    Practice settings                                                                               
+                                                                                                    
+     1 Appearance  2 Sound  3 Practice  4 Config                                                    
+                                                                                                    
+    > Theme                                 Paperwave      Typing preview                           
+      High contrast                               off                                               
+      Reduced motion                              off                                               
+      ASCII symbols                               off      ╭───╮ ╭───╮ ╭───╮                        
+      Typing caret                              block      │ T │ │ Y │ │ U │                        
+      Sidebar                                     off      ╰───╯ ╰───╯ ╰───╯                        
+                                                                                                    
+                                                           find your rhythm                         
+                                                                                                    
+                                                                                                    
+                                                                                                    
+    Choose a theme. Changes save automatically.                                                     
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+   1-4 section   Up/Down select   Left/Right change                                                 
+   tab / ctrl+g menu   ctrl+p commands   f5 reload                                                  
+                                                                                                    
