@@ -11,7 +11,7 @@
 - [x] 14 themes, editable JSON config with schema, live reload, custom keybindings.
 - [x] Optional key sounds on Linux, synthesized or recorded.
 - [x] Responsive layouts from 60×20 to 240×70, deterministic UI snapshots.
-- [x] Formatting, Clippy, unit and integration tests, PTY smoke tests.
+- [x] Formatting, Clippy, unit and integration tests.
 
 ## Before the first public release
 

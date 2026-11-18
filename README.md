@@ -148,7 +148,13 @@ Settings also has high contrast, reduced motion, ASCII symbols, a block or under
 Sound is off by default. Turn it on in **Settings → 2 Sound**, choose a profile and set the volume (0–200%).
 
 - **Creamy, Soft, Typewriter:** synthesized by Quickfox, no files needed.
-- **EG Oreo, NK Cream:** recordings from [Somewhere](https://www.somewheretypingtest.com/), downloaded for personal use with `python3 scripts/install_reference_sounds.py`. They are never bundled.
+- **EG Oreo, NK Cream:** recordings used by [Somewhere](https://www.somewheretypingtest.com/), for personal use only, so they are not bundled. Download them yourself:
+
+  ```bash
+  mkdir -p ~/.local/share/quickfox/sounds/reference && cd $_
+  curl -LO https://www.somewheretypingtest.com/sfx/oreo.ogg
+  curl -LO https://www.somewheretypingtest.com/sfx/nk-cream.wav
+  ```
 
 Only accepted keys and Backspace make a sound. Playback uses `libpulse-simple` (PulseAudio, PipeWire and WSLg). If audio is missing, the game stays silent and Settings says why. Details are in [docs/audio.md](docs/audio.md).
 
@@ -228,15 +234,12 @@ To reset, close the game and delete `progress.json`. To restore a backup, copy a
 cargo fmt --all -- --check
 cargo clippy --all-targets --locked -- -D warnings
 cargo test --locked
-python3 scripts/smoke_pty.py      # drives the real binary in a pseudo-terminal
 ```
 
-Screenshots in this README are rendered from the real UI, without a terminal:
+Every screen can be rendered from the real UI without a terminal, as text and JSON in `target/previews/`:
 
 ```bash
 cargo run --example render_previews
-python3 -m venv .preview-env && .preview-env/bin/pip install Pillow
-.preview-env/bin/python scripts/render_preview.py   # PNGs in target/previews/
 ```
 
 More detail: [architecture](docs/architecture.md), [game rules](docs/game-design.md), [audio](docs/audio.md), [benchmarks](docs/benchmarks.md), [distribution](docs/distribution.md), [roadmap](docs/ROADMAP.md).

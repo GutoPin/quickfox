@@ -267,7 +267,7 @@ impl SoundEngine {
             0 => "Sound is off",
             1 => "Connecting to system audio...",
             2 => "System audio ready",
-            4 => "Sound pack missing or invalid; run the installer",
+            4 => "Sound files missing; see the README",
             _ => "Audio unavailable; typing stays silent",
         }
     }

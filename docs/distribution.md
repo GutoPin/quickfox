@@ -8,13 +8,12 @@ On Linux x86_64:
 
 ```bash
 bash scripts/package-linux.sh
-python3 scripts/smoke_pty.py target/release/quickfox
 (cd target/packages && sha256sum --check SHA256SUMS)
 ```
 
 This writes `target/packages/quickfox-<version>-linux-x86_64.tar.gz` and `SHA256SUMS`.
 The archive holds the executable, README, license, changelog, docs and screenshots, the config
-example and schema, the word-list provenance and the optional sound installer. The
+example and schema, and the word-list provenance. The
 personal-use keyboard recordings are never included.
 
 The binary links against the build machine's glibc; it is not a static or musl build.

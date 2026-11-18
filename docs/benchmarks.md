@@ -9,7 +9,7 @@ end-to-end input-latency guarantees.
 - Ubuntu 24.04.4 LTS, Linux 6.6.87.2-microsoft-standard-WSL2, x86_64.
 - rustc 1.99.1 with the committed Cargo.lock. Rust 1.88 also passed all-target checks.
 - Release profile: size optimization, thin LTO, one codegen unit, stripped symbols.
-- Python Unix pseudo-terminal, 100×30 cells, `TERM=xterm-256color`; inherited `NO_COLOR`
+- A Unix pseudo-terminal, 100×30 cells, `TERM=xterm-256color`; inherited `NO_COLOR`
   selected monochrome output for the startup sample. No graphical terminal emulator
   or display pipeline was measured.
 
@@ -45,7 +45,6 @@ packaging command rather than treated as a stable binary metric.
 ```bash
 cargo build --release --locked
 cargo run --release --locked --example benchmark
-python3 scripts/benchmark_pty.py
 stat -c '%n %s bytes' target/release/quickfox
 bash scripts/package-linux.sh
 stat -c '%n %s bytes' target/packages/*.tar.gz

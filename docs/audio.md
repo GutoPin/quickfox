@@ -19,18 +19,17 @@ NK Cream at 0 ms for 185 ms.
 The [EG Oreo listing](https://mechvibes.com/sound-packs/eg-oreo) and
 [NK Cream listing](https://mechvibes.com/sound-packs/nk-cream-original-by-ryan) mark them
 for personal use. Recordings are not included in this repository or distributable
-archive. Run the separate installer for local personal use:
+archive. To use them, download the two files into the sounds folder:
 
 ```bash
-python3 scripts/install_reference_sounds.py
+mkdir -p ~/.local/share/quickfox/sounds/reference && cd $_
+curl -LO https://www.somewheretypingtest.com/sfx/oreo.ogg
+curl -LO https://www.somewheretypingtest.com/sfx/nk-cream.wav
 ```
 
-It downloads `oreo.ogg` and `nk-cream.wav` from Somewhere into
-`$XDG_DATA_HOME/quickfox/sounds/reference`, defaulting to
-`~/.local/share/quickfox/sounds/reference`, and writes provenance and SHA-256 hashes.
-The game does not access the network. The installer needs Python 3 and network access.
-For a custom folder, pass `--directory PATH` and set `sound.directory` to its absolute
-path. This location is independent of the CLI `--data-dir` profile isolation option.
+The default folder is `$XDG_DATA_HOME/quickfox/sounds/reference`, or
+`~/.local/share/quickfox/sounds/reference`. The game itself never accesses the network.
+For a custom folder, set `sound.directory` to its absolute path. This location is independent of the CLI `--data-dir` profile isolation option.
 Missing or invalid media produces a visible Settings message; typing remains usable.
 
 ## Playback

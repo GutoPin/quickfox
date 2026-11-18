@@ -128,4 +128,4 @@ key segment, downmixes and resamples to 48 kHz, and applies short edge fades. Fi
 duration, channel count, rate, and sample values are bounded/validated. Changing the
 profile or source directory replaces the worker without blocking the UI. Explicit
 preview events survive initialization; ordinary key events older than 150 ms expire.
-The app never downloads media. The separate installer records asset provenance locally.
+The app never downloads media.
