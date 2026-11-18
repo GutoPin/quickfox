@@ -5,7 +5,6 @@
 **Touch typing practice for the terminal.**<br>
 Short sessions, five levels, mistakes you can see. Runs offline.
 
-[![CI](https://img.shields.io/github/actions/workflow/status/GutoPin/quickfox/ci.yml?branch=main&style=flat-square&label=ci)](https://github.com/GutoPin/quickfox/actions/workflows/ci.yml)
 ![Rust 1.88+](https://img.shields.io/badge/rust-1.88%2B-0a0a0a?style=flat-square&logo=rust&logoColor=white)
 ![Linux](https://img.shields.io/badge/platform-linux-0a0a0a?style=flat-square&logo=linux&logoColor=white)
 ![Offline](https://img.shields.io/badge/network-none-0a0a0a?style=flat-square)
@@ -48,7 +47,7 @@ cargo run --release --locked
 
 `cargo install` puts the binary in `~/.cargo/bin`. Uninstall with `cargo uninstall quickfox`.
 
-Linux x86_64 is tested. macOS and Windows are in the CI matrix but have not been tried by hand, and key sounds are Linux-only for now. Use a terminal of at least **60 × 20** cells.
+Linux x86_64 is tested. macOS and Windows should build but have not been tried yet, and key sounds are Linux-only for now. Use a terminal of at least **60 × 20** cells.
 
 ## Play
 

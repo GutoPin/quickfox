@@ -21,9 +21,7 @@ The binary links against the build machine's glibc; it is not a static or musl b
 Key sounds load `libpulse-simple.so.0` at runtime when available, and the game starts
 without it. Check runtime libraries with `ldd` and `readelf`.
 
-The release workflow runs on version tags or by hand. It builds on Ubuntu 24.04 with
-Rust 1.88, runs the PTY smoke tests against the release binary and uploads the archive
-as a workflow artifact. Checksums catch corrupted downloads; they are not signatures.
+Checksums catch corrupted downloads; they are not signatures.
 
 ## Installing an archive
 

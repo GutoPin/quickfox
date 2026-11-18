@@ -11,12 +11,12 @@
 - [x] 14 themes, editable JSON config with schema, live reload, custom keybindings.
 - [x] Optional key sounds on Linux, synthesized or recorded.
 - [x] Responsive layouts from 60×20 to 240×70, deterministic UI snapshots.
-- [x] Formatting, Clippy, unit and integration tests, PTY smoke tests, CI.
+- [x] Formatting, Clippy, unit and integration tests, PTY smoke tests.
 
 ## Before the first public release
 
 - [x] Choose a license (MIT).
-- [ ] Run the macOS and Windows CI jobs and try both by hand.
+- [ ] Build and try it on macOS and Windows.
 - [ ] Manual checks in GNOME Terminal, Kitty, WezTerm and over SSH.
 - [ ] Watch five beginners use it and fix what trips them up.
 - [ ] Publish a GitHub release with notes and checksums.
