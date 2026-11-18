@@ -3,8 +3,14 @@ name = "quickfox"
 version = "0.4.0"
 edition = "2024"
 rust-version = "1.88"
-description = "An offline terminal typing game with guided progression and adaptive practice"
-publish = false
+description = "Touch typing practice for the terminal: short sessions, five levels, fully offline"
+license = "MIT"
+repository = "https://github.com/GutoPin/quickfox"
+homepage = "https://github.com/GutoPin/quickfox"
+readme = "README.md"
+keywords = ["typing", "tui", "terminal", "game", "practice"]
+categories = ["command-line-utilities", "games"]
+include = ["src/**", "assets/**", "config/**", "README.md", "CHANGELOG.md", "LICENSE"]
 
 [dependencies]
 anyhow = "1.0"

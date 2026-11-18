@@ -10,7 +10,7 @@ name="quickfox-${version}-linux-x86_64"
 package_stage=$(mktemp -d)
 trap 'rm -rf "$package_stage"' EXIT
 mkdir -p "target/packages" "$package_stage/$name"
-cp target/release/quickfox README.md CHANGELOG.md "$package_stage/$name/"
+cp target/release/quickfox README.md CHANGELOG.md LICENSE "$package_stage/$name/"
 cp -R docs "$package_stage/$name/docs"
 cp -R config "$package_stage/$name/config"
 mkdir -p "$package_stage/$name/scripts"
